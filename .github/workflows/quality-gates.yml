@@ -18,9 +18,9 @@ jobs:
         with:
           node-version: "20"
 
-      # Cache npm dependencies
+      # Cache npm dependencies (ใช้ v3 หรือ v4 แทน v2)
       - name: Cache npm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4 # หรือ actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('backend/package-lock.json') }}
@@ -47,9 +47,9 @@ jobs:
         with:
           node-version: "20"
 
-      # Cache npm dependencies
+      # Cache npm dependencies (ใช้ v3 หรือ v4 แทน v2)
       - name: Cache npm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4 # หรือ actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('backend/package-lock.json') }}
